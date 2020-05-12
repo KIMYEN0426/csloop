@@ -44,7 +44,8 @@ namespace csloop
                 x++;
             }
             */
-            while (true)
+            bool state = true;
+            while (state)
             {
                 ConsoleKeyInfo info = Console.ReadKey();
                 switch (info.Key)
@@ -62,7 +63,7 @@ namespace csloop
                         Console.WriteLine("왼쪽로 이동");
                         break;
                     case ConsoleKey.X:
-                        break;
+                        state = false;
                         break;
                 }
             }
